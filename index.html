@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax/Homa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script language="javascript" src="/ajax_framework.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="header span3">
+                <caption colspan="2">
+                    <h1 style="font-family: Helvetica;"> <center> Ajax </h1> <!Логический шрифт!>
+                </caption>
+            </div>
+            <div class="search span3 offset6"><input type="text" name="" id=""></div>
+        </div>
+        <div class="row">
+            <div class="slider span12"></div>
+        </div>
+        <div class="row">
+            <div class="thumb span2"><img src="Blue_Ajax.jpg" alt=""></div>
+            <tr>
+                <td>
+                    <table border = "0" width = "100%">
+
+                    <td width =  "50%" height = "100"> <center><img src="What_ajax.png" alt="Море" usemap="#1"> </td>
+                        <map id="1" name="1">
+                            <area href="" shape="rect" coords="0, 0, 100, 120" target="_blank">
+                            <area href="" shape="circle" coords="250, 60, 40" target="_blank">
+                            <area href="" shape="polygon" coords="100, 30, 150, 20, 200, 30, 200, 90, 100, 90" target="_blank">
+                        </map>
+
+                    </table>
+                </td>
+            </tr>
+            <div class="thumb span2"><img src="Word_Ajax.png" alt=""></div>
+        </div>
+        <div class="row">
+            <div class="sidebar span2">
+                <nav>
+                    <ul>
+                        <li><a href="/about">О создателе</a></li>
+                        <li><a href="https://github.com/Mechetel" target="_blank">Мой Github</a></li>
+                        <li><a href="https://itproger.com/course/ajax" target="_blank">Уроки Ajax</a></li>
+                        <li><a href="/frames" target="_blank">Ajax vs JQuery</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content span10">
+                <h2>Ajax технологии. Что к чему? Сейчас выясним</h2>
+                <p>AJAX — это аббревиатура, которая означает Asynchronous Javascript and XML. На самом деле, AJAX не является новой технологией, так как и Javascript, и XML существуют уже довольно продолжительное время, а AJAX — это синтез обозначенных технологий. AJAX чаще всего ассоцириуется с термином Web 2.0 и преподносится как новейшее Web-приложение.</p>
+                <p>При использовании AJAX нет необходимости обновлять каждый раз всю страницу, так как обновляется только ее конкретная часть. Это намного удобнее, так как не приходится долго ждать, и экономичнее, так как не все обладают безлимитным интернетом. Правда в этом случае, разработчику необходимо следить, чтобы пользователь был в курсе того, что происходит на странице. Это можно реализовать с использованием индикаторов загрузки, текстовых сообщений о том, что идёт обмен данными с сервером. Необходимо также понимать, что не все браузеры поддерживают AJAX (старые версии браузеров и текстовые браузеры). Плюс Javascript может быть отключен пользователем. Поэтому, не следует злоупотреблять использованием технологии и прибегать к альтернативным методам представления информации на Web-сайте.</p>
+                <p>AJAX использует два метода работы с веб-страницей: изменение Web-страницы не перезагружая её, и динамическое обращение к серверу. Второе может осуществляться несколькими способами, в частности, XMLHttpRequest, о чем мы и будем говорить, и использование техники скрытого фрейма.</p>
+				<hr>
+					<p>Пример такого использования можно увидеть ниже</p>
+					<h2>Ajax Search Engine</h2>
+
+					<form id="searchForm" name="searchForm" method="post" action="javascript:insertTask();">
+						<div class="searchInput">
+							<input name="searchq" type="text" id="searchq" size="30" onkeyup="javascript:searchNameq()"/>
+							<input type="button" name="submitSearch" id="submitSearch" value="Search" onclick="javascript:searchNameq()"/>
+						</div>
+					</form>
+
+					<h3>Search Results</h3>
+					<div id="msg">Type something into the input field</div>
+					<div id="search-result"></div>
+				<hr>
+				<p>Технология AJAX использует комбинацию:</p>
+                <ol type="A">
+                    <li>(X)HTML, CSS для подачи и стилизации информации</li>
+                    <li>DOM-модель, операции над которой производятся javascript на стороне клиента, чтобы обеспечить динамическое отображение и взаимодействие с информацией</li>
+                    <li>XMLHttpRequest для асинхронного обмена данными с веб-сервером. В некоторых AJAX-фреймворках и в некоторых ситуациях, вместо XMLHttpRequest используется IFrame, SCRIPT-тег или другой аналогичный <code>транспорт</code>.</li>
+                    <li>JSON часто используется для обмена данными, однако любой формат подойдет, включая форматированный HTML, текст, XML и даже какой-нибудь EBML</li>
+                </ol>
+                <ol type="I">
+                    <li>Типичное AJAX-приложение состоит как минимум из двух частей.</li>
+                    <li>Первая выполняется в браузере и написана, как правило, на JavaScript, а вторая - находится на сервере и написана, например, на Ruby, Java или PHP .</li>
+                    <li>Между этими двумя частями происходит обмен данными через XMLHttpRequest(или другой транспорт</a>).</li>
+                </ol>
+
+
+                <p>В первую очередь AJAX полезен для небольших элементов, связанных с элементарными действиями: добавить в корзину, подписаться, и т.п.</p>
+                <table border="0">
+                    <tr>
+                        <td><img src="http://javascript.ru/ajax_intro/can_do_1.gif" onclick="alert('Почтамт поможет!')" /></td>
+                        <td><img src="http://javascript.ru/ajax_intro/can_do_2.png" onclick="alert('Да это просто пример :)')" /></td>
+                        <td><img src="http://javascript.ru/ajax_intro/can_do_3.png" onclick="alert('Закажи мне.. Закажи..');" /></td>
+                    </tr>
+                </table>
+                <h3 id="nezametnye-dlya-polzovatelya-deystviya" class="header-link"><a href="#nezametnye-dlya-polzovatelya-deystviya">Незаметные для пользователя действия.</a></h3>
+                <p>Например, при редактировании статьи - каждые 10 минут результаты автосохраняются на сервере.</p>
+                <h3 id="nepreryvnaya-podzagruzka-informacii-s-servera" class="header-link"><a href="#nepreryvnaya-podzagruzka-informacii-s-servera">Непрерывная подзагрузка информации с сервера.</a></h3>
+                <p>Самый типичный пример - чат. В окошко постоянно поступают все новые сообщения, непрерывно подгружаемые с сервера. И, опять же, через AJAX, без перезагрузки страницы, пользователь может<br />
+                отсылать сообщения на сервер.</p>
+                <p>Существуют другие предложения подобного рода, например, отображающие биржевые котировки в реальном времени.</p>
+                <h2 id="primer-google-suggest" class="header-link"><a href="#primer-google-suggest">Пример. Google suggest.</a></h2>
+                <p>Google - одна из первых систем, которая предложила "живой поиск", live search. Пользователь печатает поисковую фразу, а система автодополняет ее, получая<br />
+                список самых вероятных дополнений с сервера.</p>
+
+                <p>Код, который это обеспечивает, работает следующим образом.</p>
+                <ul>
+                    <li>Активируется примерно при каждом нажатии клавиши
+                        <ul>
+                            <li>Время посылки последнего запроса отслеживается</li>
+                            <li>Для "обычной" скорости печати - запрос отсылается при каждом нажатии</li>
+                            <li>Для "программистской" скорости - каждые несколько нажатий</li>
+                        </ul>
+                    </li>
+                    <li>Создается скрытый DIV, который показывается при начале печати</li>
+                    <li>DIV заполняется ответом сервера
+                <ul>
+                    <li>Текущий результат подсвечен, можно перемещаться и выбирать</li>
+                    <li>При нажатии правой стрелки, поиск в подрезультатах</li>
+                </ul>
+                </li>
+                    <li>Результаты кэшируются
+                <ul>
+                    <li>при нажатии на "удалить", обращения к серверу не происходит</li>
+                </ul>
+                </li>
+                <li>Время на осуществление запроса отслеживается для управления частотой запросов к серверу
+                <ul>
+                    <li>Обычный модем будет обращаться к серверу меньше,</li>
+                    <li>Подключение по выделенной линии - запросы идут чаще.</li>
+                </ul>
+                </li>
+                </ul>
+                <h2 id="primer-gmail" class="header-link"><a href="#primer-gmail">Пример. Gmail.</a></h2>
+                <p>Раз уж взялись за Google - рассмотрим почтовый сервис той же компании, <a href="http://gmail.com" class="liexternal">http://gmail.com</a>.</p>
+                <p>На момент его появления он явился единственным открытым почтовым сервисом, использующим AJAX для следующих фич.</p>
+                <ol>
+                    <li>Проверка ошибок ввода формы ДО сабмита
+                    <div>На сервер передается имя пользователя, результат проверки возвращается на страницу.</div>
+                    </li>
+                    <li>"Мгновенная" загрузка
+                    <div>Браузер обращается к серверу только за данными, а не обновляет весь громоздкий интерфейс</div>
+                    </li>
+                    <li>Автоматическая "доставка" писем в открытую папку
+                    <div>Время от времени отправляется   запрос на сервер и, если пришли новые письма, они появляются в браузере.</div>
+                    </li>
+                    <li>Автодополнение
+                    <div>Достаточно ввести первые буквы имени адресата, и остальные дополняются автоматически, как в десктоп-приложениях.</div>
+                    </li>
+                </ol>
+                <p>Результат: обширная популярность, высокий спрос на account'ы с момента открытия.</p>
+
+                <tr> <td>
+
+                    <h2 id="web">Оффициальный сайт разработчиков</h2>
+                    <hr>
+                        <table border = "1" width = "100%">
+                            <td width =  "50%" >
+                            <a href="https://ru.wikipedia.org/wiki/AJAX" target="_blank"> <img src="Blue_Ajax.jpg"  width = "400" height = "250" onmouseover="this.width=500;this.height=350" onmouseout="this.width=400;this.height=250" > </a> </td>
+                            <td > <a href="https://jquery.com/" target="_blank"> <img src="jquery.png" width = "400" height = "250" onmouseover="this.width=500;this.height=350" onmouseout="this.width=400;this.height=250"> </a> </td>
+                        </table>
+                </td>
+
+                <hr>
+                <img src="http://javascript.ru/ajax_intro/can_do_2df.png" alt="эта картинка не грузится" />
+                <hr>
+
+                <h1>Глоссарий</h1>
+                <dl>
+                   <dt>Тег</dt>
+                     <dd>Тег — это специальный символ разметки, который применяется для
+                         вставки различных элементов на веб-страницу таких как: рисунки,
+                         таблицы, ссылки и др., и для изменения их вида.</dd>
+                   <dt>HTML-документ</dt>
+                     <dd>Обычный текстовый файл, который может содержать в себе текст,
+                         теги и стили. Изображения и другие объекты хранятся отдельно.
+                         Содержимое такого файла обычно называется HTML-код.</dd>
+                   <dt>Сайт</dt>
+                   <dd>Cайт — это набор отдельных веб-страниц, которые связаны между собой
+                         ссылками и единым оформлением.</dd>
+                </dl>
+
+                <form method="post">
+                    <fieldset> <legend> Поля ввода </legend>
+                        <p> <label> Введите логин <input type="text" name="text">  </label> </p>
+                        <p> <label> Введите пароль <input type="password" name="pasword">  </label> </p>
+                        <p> <label> Коментарий <textarea cols="30" rows="6", name="comment"> Введите текст...</textarea>  </label> </p>
+                    </fieldset>
+                    <fieldset> <legend> Вопрсы </legend>
+                        <p> Хотели бы вы еще раз поcетить сайт?</p>
+                        <p> Да <input type="radio" name="radio"> Нет <input type="radio" name="radio"> </p>
+                        <p> С какими терминами вы знакомы? </p>
+                        <p> <input type="checkbox" name="checkbox_Ajax"> Ajax  </p>
+                        <p> <input type="checkbox" name="checkbox_JQuery"> JQuery</p>
+                     <!Многострочные списки!>
+                        <p> Выберите страну
+                          <select name="country">
+                            <option>Украина</option>
+                            <option>Польша</option>
+                            <option>Эстония</option>
+                          </select>
+                        </p>
+                        <p> Стали бы вы использовать данный прием? <select size="2" name="choose_this"> <!C одиночным выбором!>
+                            <option>Да</option>
+                            <option>Нет</option>
+                            <option>Не знаю</option>
+                        </select> </p>
+                         <p> Какой бы пример вы выбрали? <select multiple, name="vibor"> <!C множественным выбором!>
+                         <optgroup label = "Виберете">
+                            <option>Ajax</option>
+                            <option>JQuery</option>
+                        </optgroup>
+
+                        </select> </p>
+                        <p><input type="reset" name="reset" value="Сброс"> <input type="file" multiple, name="choose_file"></p>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </fieldset>
+                    </fieldset>
+                    </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer span12"><small>Этот сайт сделан мной на скорую руку</small></div>
+        </div>
+    </div>
+</body>
+</html>
